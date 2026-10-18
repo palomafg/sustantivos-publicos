@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Navbar } from '../components/Navbar'
 import { CriterionSelector } from '../components/CriterionSelector'
 import { WordCloud } from '../components/WordCloud'
@@ -7,7 +7,22 @@ import { mockWords } from '../data/mockWords'
 
 export default function Archivo() {
   const [selectedWordId, setSelectedWordId] = useState(null)
-  const [criterion, setCriterion] = useState('todos')
+  const [criterion, setCriterion] = useState(() => {
+    try {
+      const saved = localStorage.getItem('criterio-archivo')
+      return saved ? saved : 'todos'
+    } catch {
+      return 'todos'
+    }
+  })
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('criterio-archivo', criterion)
+    } catch {
+      // Ignorar errores de localStorage
+    }
+  }, [criterion])
 
   const approvedWords = mockWords.filter(w => w.aprobado)
   const selectedWord = approvedWords.find(w => w.id === selectedWordId) || null

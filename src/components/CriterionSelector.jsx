@@ -3,9 +3,9 @@ import { Link, useLocation } from 'react-router-dom'
 export function CriterionSelector({ current, onChange }) {
   const criteria = [
     { value: 'todos', label: 'Todos' },
-    { value: 'barrio', label: 'Barrio' },
-    { value: 'alfabeto', label: 'Alfabeto' },
-    { value: 'visual', label: 'Visual' },
+    { value: 'barrio', label: 'Ubicacion' },
+    { value: 'alfabeto', label: 'A-Z' },
+    { value: 'visual', label: 'Aspecto' },
     { value: 'visitantes', label: 'Visitantes' },
   ]
 
