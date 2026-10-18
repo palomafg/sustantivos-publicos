@@ -1,0 +1,31 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-gray-900 antialiased;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  h1, h2, h3, h4 {
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  .word-item {
+    @apply cursor-pointer;
+  }
+
+  @keyframes opacity-pulse {
+    0%, 100% { opacity: 0.05; }
+    50% { opacity: 0.25; }
+  }
+
+  .opacity-pulse {
+    animation: opacity-pulse ease-in-out infinite;
+  }
+}
