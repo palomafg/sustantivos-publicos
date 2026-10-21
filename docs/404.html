@@ -1,13 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>Sustantivos Públicos</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
 </head>
 <body>
   <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    // Redirige cualquier ruta a index.html para React Router
+    (function() {
+      var path = window.location.pathname;
+      var repo = '/sustantivos-publicos/';
+      if (path.indexOf(repo) === 0) {
+        path = path.substring(repo.length);
+      }
+      if (path && path !== '/' && !path.match(/\.(html|js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2)$/)) {
+        window.location.replace(repo + 'index.html' + window.location.search + window.location.hash);
+      }
+    })();
+  </script>
+  <noscript>
+    <iframe src="index.html" style="width:100%;height:100%;border:none;"></iframe>
+  </noscript>
 </body>
 </html>
