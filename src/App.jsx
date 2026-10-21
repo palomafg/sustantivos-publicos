@@ -8,7 +8,7 @@ import { mockWords } from './data/mockWords'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/sustantivos-publicos/">
       <Routes>
         <Route path="/" element={<Home words={mockWords} />} />
         <Route path="/archivo" element={<Archivo />} />
