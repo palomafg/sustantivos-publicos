@@ -1,4 +1,7 @@
+import { useNavigate } from 'react-router-dom'
+
 export function Home({ words }) {
+  const navigate = useNavigate()
   const items = words.map((word, index) => {
     const seed = word.id.charCodeAt(0) + word.id.charCodeAt(word.id.length - 1)
 
@@ -32,7 +35,7 @@ export function Home({ words }) {
           className={word.className}
           style={word.style}
           onClick={() => {
-            window.location.href = '/sustantivos-publicos/archivo'
+            navigate('/archivo')
           }}
         >
           <img
