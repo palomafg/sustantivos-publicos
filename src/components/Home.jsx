@@ -32,7 +32,7 @@ export function Home({ words }) {
           className={word.className}
           style={word.style}
           onClick={() => {
-            window.location.href = '/archivo'
+            window.location.href = '/sustantivos-publicos/archivo'
           }}
         >
           <img
