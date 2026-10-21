@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Home } from './components/Home'
 import Archivo from './pages/Archivo'
 import { UploadForm } from './components/UploadForm'
@@ -15,6 +15,7 @@ export default function App() {
         <Route path="/cargar" element={<UploadForm />} />
         <Route path="/moderar" element={<ModerationPanel />} />
         <Route path="/palabra/:id" element={<WordDetail />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   )
