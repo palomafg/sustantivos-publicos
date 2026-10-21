@@ -6,21 +6,6 @@
 </head>
 <body>
   <div id="root"></div>
-  <script>
-    // Para GitHub Pages: redirige cualquier ruta a index.html para que React Router funcione
-    (function() {
-      var path = window.location.pathname;
-      var repo = '/sustantivos-publicos/';
-      if (path.indexOf(repo) === 0) {
-        path = path.substring(repo.length);
-      }
-      if (path && path !== '/' && !path.match(/\.(html|js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2)$/)) {
-        window.location.replace(repo + 'index.html' + window.location.search + window.location.hash);
-      }
-    })();
-  </script>
-  <noscript>
-    <iframe src="index.html" style="width:100%;height:100%;border:none;"></iframe>
-  </noscript>
+  <script type="module" src="/sustantivos-publicos/src/main.jsx"></script>
 </body>
 </html>
