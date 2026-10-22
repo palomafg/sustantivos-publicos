@@ -12,8 +12,17 @@ export function WordDetail({ word: wordProp, onClose, words: wordsProp }) {
     typeof window !== 'undefined' ? window.innerWidth < MOBILE_BREAKPOINT : false
   )
 
+  // Filas necesarias para cubrir el alto de la ventana (3 columnas)
+  // Usamos 80px como estimado conservador de alto de imagen para asegurar cobertura
+  const [mobileRows, setMobileRows] = useState(
+    typeof window !== 'undefined' ? Math.ceil(window.innerHeight / 80) + 1 : 8
+  )
+
   useEffect(() => {
-    const onResize = () => setIsMobile(window.innerWidth < MOBILE_BREAKPOINT)
+    const onResize = () => {
+      setIsMobile(window.innerWidth < MOBILE_BREAKPOINT)
+      setMobileRows(Math.ceil(window.innerHeight / 80) + 1)
+    }
     window.addEventListener('resize', onResize)
     return () => window.removeEventListener('resize', onResize)
   }, [])
@@ -21,16 +30,17 @@ export function WordDetail({ word: wordProp, onClose, words: wordsProp }) {
   const word = wordProp || mockWords.find(w => w.id === id) || { id }
   const allWords = wordsProp || mockWords
 
-  // En móvil/tablet: grilla aleatoria de 3x6 (18 imágenes)
+  // En móvil/tablet: grilla de 3 columnas con filas suficientes para cubrir el alto
+  const mobileCount = mobileRows * 3
   const [mobileBg, setMobileBg] = useState([])
   useEffect(() => {
     if (isMobile) {
       const shuffled = [...allWords].sort(() => Math.random() - 0.5)
-      setMobileBg(shuffled.slice(0, 18))
+      setMobileBg(shuffled.slice(0, mobileCount))
     } else {
       setMobileBg([])
     }
-  }, [isMobile, allWords])
+  }, [isMobile, allWords, mobileCount])
 
   const handleClose = () => {
     if (onClose) onClose()
@@ -57,7 +67,7 @@ export function WordDetail({ word: wordProp, onClose, words: wordsProp }) {
         <div
           className={
             isMobile
-              ? 'absolute inset-0 grid grid-cols-3 grid-rows-6 gap-0 p-0 w-full h-full overflow-hidden opacity-15'
+              ? 'absolute inset-0 grid grid-cols-3 gap-0 p-0 w-full h-full overflow-visible opacity-15'
               : 'absolute inset-0 grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 2xl:grid-cols-12 gap-0 p-0 w-full h-full overflow-hidden opacity-15'
           }
         >
