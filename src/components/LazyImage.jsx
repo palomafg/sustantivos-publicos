@@ -1,31 +1,38 @@
-import { useRef } from 'react'
-import { useOnScreen } from '../hooks/useOnScreen'
+import { useState, useEffect } from 'react'
 
 /**
- * Imagen que solo se monta en el DOM cuando el usuario se acerca a ella.
- * Mientras tanto se renderiza un div placeholder con las mismas clases/estilos
- * para no desplazar el layout.
+ * Imagen que solo descarga su recurso cuando entra al viewport.
+ * El elemento <img> siempre está en el DOM (preserva layout),
+ * pero el src solo se asigna cuando es visible.
  */
 export function LazyImage({ src, alt, className, style, loading = 'lazy', decoding = 'async', onError }) {
-  const ref = useRef()
-  const isVisible = useOnScreen(ref, { threshold: 0, rootMargin: '200px' })
+  const [isVisible, setIsVisible] = useState(false)
+  const [node, setNode] = useState(null)
+
+  useEffect(() => {
+    if (!node) return
+    if (!('IntersectionObserver' in window)) {
+      setIsVisible(true)
+      return
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0, rootMargin: '200px' }
+    )
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [node])
 
   return (
-    <>
-      {isVisible ? (
-        <img
-          ref={ref}
-          src={src}
-          alt={alt}
-          className={className}
-          loading={loading}
-          decoding={decoding}
-          style={style}
-          onError={onError}
-        />
-      ) : (
-        <div ref={ref} className={className} style={style} />
-      )}
-    </>
+    <img
+      ref={setNode}
+      src={isVisible ? src : undefined}
+      alt={alt}
+      className={className}
+      loading={loading}
+      decoding={decoding}
+      style={style}
+      onError={onError}
+    />
   )
 }
