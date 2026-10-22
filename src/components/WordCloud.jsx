@@ -79,6 +79,7 @@ export function WordCloud({ words, criterion, onSelect }) {
                           alt={word.sustantivo}
                           className="w-full h-full object-contain"
                           loading="lazy"
+                          decoding="async"
                         />
                       </div>
                     )
