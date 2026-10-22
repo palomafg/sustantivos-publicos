@@ -1084,7 +1084,7 @@
     sustantivo: 'POSTRE',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/POSTRE.jpg',
+    fotoUrl: 'imagenes/POSTRE.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
