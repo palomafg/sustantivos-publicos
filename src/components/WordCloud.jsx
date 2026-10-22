@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { WordItem } from './WordItem'
+import { LazyImage } from './LazyImage'
 
 export function WordCloud({ words, criterion, onSelect }) {
   const navigate = useNavigate()
@@ -74,12 +75,10 @@ export function WordCloud({ words, criterion, onSelect }) {
                           navigate(`/palabra/${word.id}`)
                         }}
                       >
-                        <img
+                        <LazyImage
                           src={word.fotoUrl}
                           alt={word.sustantivo}
                           className="w-full h-full object-contain"
-                          loading="lazy"
-                          decoding="async"
                         />
                       </div>
                     )

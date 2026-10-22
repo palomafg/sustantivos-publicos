@@ -1,11 +1,26 @@
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { LazyImage } from './LazyImage'
+
+const BACKGROUND_COUNT = 20
+const ROTATION_MS = 5000
 
 export function Home({ words }) {
   const navigate = useNavigate()
-  const items = words.map((word, index) => {
-    const seed = word.id.charCodeAt(0) + word.id.charCodeAt(word.id.length - 1)
+  const [visibleWords, setVisibleWords] = useState([])
 
-    // Contenedor que ocupa el 100% del ancho y alto del navegador
+  useEffect(() => {
+    const pickRandom = () => {
+      const shuffled = [...words].sort(() => Math.random() - 0.5)
+      setVisibleWords(shuffled.slice(0, BACKGROUND_COUNT))
+    }
+    pickRandom()
+    const interval = setInterval(pickRandom, ROTATION_MS)
+    return () => clearInterval(interval)
+  }, [words])
+
+  const items = visibleWords.map((word, index) => {
+    const seed = word.id.charCodeAt(0) + word.id.charCodeAt(word.id.length - 1)
     const style = {
       position: 'absolute',
       top: 0,
@@ -16,13 +31,12 @@ export function Home({ words }) {
       maxHeight: 'none',
       opacity: 0.05,
       animation: 'opacity-pulse ease-in-out infinite',
-      animationDuration: `${1 + (seed % 10)}s`, // entre 1s y 10s
-      animationDelay: `${(seed % 10) * 0.4}s`, // retraso distinto por imagen
+      animationDuration: `${1 + (seed % 10)}s`,
+      animationDelay: `${(seed % 10) * 0.4}s`,
     }
-
     return {
       ...word,
-      style: style,
+      style,
       className: 'word-item absolute select-none group cursor-pointer opacity-pulse',
     }
   })
@@ -38,15 +52,11 @@ export function Home({ words }) {
             navigate('/archivo')
           }}
         >
-          <img
+          <LazyImage
             src={word.fotoUrl}
             alt={word.sustantivo}
             className="w-full h-full object-cover"
-            loading="lazy"
-            decoding="async"
-            onError={(e) => {
-              e.target.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Inter,sans-serif" font-size="36" fill="#999">' + word.sustantivo + '</text></svg>'
-            }}
+            style={{ width: '100%', height: '100%' }}
           />
         </div>
       ))}

@@ -1,11 +1,36 @@
 ﻿import { useParams, useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import { mockWords } from '../data/mockWords'
+import { LazyImage } from './LazyImage'
+
+const MOBILE_BREAKPOINT = 1024 // tablets y móviles usan la grilla reducida
 
 export function WordDetail({ word: wordProp, onClose, words: wordsProp }) {
   const { id } = useParams()
   const navigate = useNavigate()
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== 'undefined' ? window.innerWidth < MOBILE_BREAKPOINT : false
+  )
+
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth < MOBILE_BREAKPOINT)
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
+
   const word = wordProp || mockWords.find(w => w.id === id) || { id }
-  const words = wordsProp || mockWords
+  const allWords = wordsProp || mockWords
+
+  // En móvil/tablet: grilla aleatoria de 3x6 (18 imágenes)
+  const [mobileBg, setMobileBg] = useState([])
+  useEffect(() => {
+    if (isMobile) {
+      const shuffled = [...allWords].sort(() => Math.random() - 0.5)
+      setMobileBg(shuffled.slice(0, 18))
+    } else {
+      setMobileBg([])
+    }
+  }, [isMobile, allWords])
 
   const handleClose = () => {
     if (onClose) onClose()
@@ -23,19 +48,25 @@ export function WordDetail({ word: wordProp, onClose, words: wordsProp }) {
     )
   }
 
+  const bgWords = isMobile ? mobileBg : allWords
+
   return (
     <>
-      {/* Fondo: grilla de todas las palabras con opacidad 15% */}
+      {/* Fondo: grilla de palabras con opacidad 15% */}
       <div className="fixed inset-0 z-50 pointer-events-none">
-        <div className="absolute inset-0 grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 2xl:grid-cols-12 gap-0 p-0 w-full h-full overflow-hidden opacity-15">
-          {[...words].sort(() => Math.random() - 0.5).map((w) => (
-            <img
+        <div
+          className={
+            isMobile
+              ? 'absolute inset-0 grid grid-cols-3 grid-rows-6 gap-0 p-0 w-full h-full overflow-hidden opacity-15'
+              : 'absolute inset-0 grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 2xl:grid-cols-12 gap-0 p-0 w-full h-full overflow-hidden opacity-15'
+          }
+        >
+          {bgWords.map((w) => (
+            <LazyImage
               key={w.id}
               src={w.fotoUrl}
               alt={w.sustantivo}
               className="w-full h-auto object-cover"
-              loading="lazy"
-              decoding="async"
             />
           ))}
         </div>
@@ -54,16 +85,11 @@ export function WordDetail({ word: wordProp, onClose, words: wordsProp }) {
         </div>
 
         {/* Imagen */}
-        <img
+        <LazyImage
           src={word.fotoUrl}
           alt={word.sustantivo}
           className="w-full h-auto rounded-lg shadow-lg mb-6 sm:mb-8 object-cover"
           style={{ maxHeight: '45vh' }}
-          loading="lazy"
-          decoding="async"
-          onError={(e) => {
-            e.target.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Inter,sans-serif" font-size="32" fill="#999">Imagen no disponible</text></svg>'
-          }}
         />
 
         {/* Título */}
