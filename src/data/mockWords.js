@@ -4,7 +4,7 @@
     sustantivo: 'ABOGADOS',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/ABOGADOS.JPG',
+    fotoUrl: 'imagenes/ABOGADOS.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -12,7 +12,7 @@
     sustantivo: 'ACTO',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/ACTO.JPG',
+    fotoUrl: 'imagenes/ACTO.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -20,7 +20,7 @@
     sustantivo: 'ALCOHOL',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/ALCOHOL.JPG',
+    fotoUrl: 'imagenes/ALCOHOL.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -28,7 +28,7 @@
     sustantivo: 'ALFAJOR',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/ALFAJOR.JPG',
+    fotoUrl: 'imagenes/ALFAJOR.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -36,7 +36,7 @@
     sustantivo: 'ALGO',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/ALGO.JPG',
+    fotoUrl: 'imagenes/ALGO.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -44,7 +44,7 @@
     sustantivo: 'ALMA',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/ALMA.JPG',
+    fotoUrl: 'imagenes/ALMA.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -52,7 +52,7 @@
     sustantivo: 'ALMACEN',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/ALMACEN.JPG',
+    fotoUrl: 'imagenes/ALMACEN.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -60,7 +60,7 @@
     sustantivo: 'AMBIENTES',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/AMBIENTES.JPG',
+    fotoUrl: 'imagenes/AMBIENTES.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -68,7 +68,7 @@
     sustantivo: 'AMIGOS',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/AMIGOS.JPG',
+    fotoUrl: 'imagenes/AMIGOS.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -76,7 +76,7 @@
     sustantivo: 'ANOS',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/ANOS.JPG',
+    fotoUrl: 'imagenes/ANOS.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -84,7 +84,7 @@
     sustantivo: 'ARREGLOS',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/ARREGLOS.JPG',
+    fotoUrl: 'imagenes/ARREGLOS.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -92,7 +92,7 @@
     sustantivo: 'ASOCIADOS',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/ASOCIADOS.JPG',
+    fotoUrl: 'imagenes/ASOCIADOS.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -100,7 +100,7 @@
     sustantivo: 'BAR',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/BAR.JPG',
+    fotoUrl: 'imagenes/BAR.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -108,7 +108,7 @@
     sustantivo: 'BARBIJOS',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/BARBIJOS.JPG',
+    fotoUrl: 'imagenes/BARBIJOS.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -116,7 +116,7 @@
     sustantivo: 'BESO',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/BESO.JPG',
+    fotoUrl: 'imagenes/BESO.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -124,7 +124,7 @@
     sustantivo: 'BESO',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/BESO2.JPG',
+    fotoUrl: 'imagenes/BESO2.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -132,7 +132,7 @@
     sustantivo: 'BIRRA',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/BIRRA.JPG',
+    fotoUrl: 'imagenes/BIRRA.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -140,7 +140,7 @@
     sustantivo: 'CAFE',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/CAFE.JPG',
+    fotoUrl: 'imagenes/CAFE.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -148,7 +148,7 @@
     sustantivo: 'CAFE',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/CAFE2.JPG',
+    fotoUrl: 'imagenes/CAFE2.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -156,7 +156,7 @@
     sustantivo: 'CALLE',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/CALLE.JPG',
+    fotoUrl: 'imagenes/CALLE.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -164,7 +164,7 @@
     sustantivo: 'CARTAS',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/CARTAS.JPG',
+    fotoUrl: 'imagenes/CARTAS.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -172,7 +172,7 @@
     sustantivo: 'CARTERAS',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/CARTERAS.JPG',
+    fotoUrl: 'imagenes/CARTERAS.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -180,7 +180,7 @@
     sustantivo: 'CASA',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/CASA.JPG',
+    fotoUrl: 'imagenes/CASA.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -188,7 +188,7 @@
     sustantivo: 'CASA',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/CASA2.JPG',
+    fotoUrl: 'imagenes/CASA2.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -196,7 +196,7 @@
     sustantivo: 'CASA',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/CASA3.JPG',
+    fotoUrl: 'imagenes/CASA3.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -204,7 +204,7 @@
     sustantivo: 'CEBOLLA',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/CEBOLLA.JPG',
+    fotoUrl: 'imagenes/CEBOLLA.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -212,7 +212,7 @@
     sustantivo: 'CEJAS',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/CEJAS.JPG',
+    fotoUrl: 'imagenes/CEJAS.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -220,7 +220,7 @@
     sustantivo: 'CELU',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/CELU.JPG',
+    fotoUrl: 'imagenes/CELU.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -228,7 +228,7 @@
     sustantivo: 'CELULARES',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/CELULARES.JPG',
+    fotoUrl: 'imagenes/CELULARES.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -236,7 +236,7 @@
     sustantivo: 'CENTRO',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/CENTRO.JPG',
+    fotoUrl: 'imagenes/CENTRO.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -244,7 +244,7 @@
     sustantivo: 'CIUDAD',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/CIUDAD.JPG',
+    fotoUrl: 'imagenes/CIUDAD.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -252,7 +252,7 @@
     sustantivo: 'CLUB',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/CLUB.JPG',
+    fotoUrl: 'imagenes/CLUB.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -260,7 +260,7 @@
     sustantivo: 'COCHERA',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/COCHERA.JPG',
+    fotoUrl: 'imagenes/COCHERA.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -268,7 +268,7 @@
     sustantivo: 'COCHERAS',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/COCHERAS.JPG',
+    fotoUrl: 'imagenes/COCHERAS.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -276,7 +276,7 @@
     sustantivo: 'COITO',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/COITO.JPG',
+    fotoUrl: 'imagenes/COITO.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -284,7 +284,7 @@
     sustantivo: 'COLILLA',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/COLILLA.JPG',
+    fotoUrl: 'imagenes/COLILLA.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -292,7 +292,7 @@
     sustantivo: 'COLOR',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/COLOR.JPG',
+    fotoUrl: 'imagenes/COLOR.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -300,7 +300,7 @@
     sustantivo: 'COMIDAS',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/COMIDAS.JPG',
+    fotoUrl: 'imagenes/COMIDAS.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -308,7 +308,7 @@
     sustantivo: 'CORAZON',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/CORAZON.JPG',
+    fotoUrl: 'imagenes/CORAZON.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -316,7 +316,7 @@
     sustantivo: 'COSAS',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/COSAS.JPG',
+    fotoUrl: 'imagenes/COSAS.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -324,7 +324,7 @@
     sustantivo: 'CRISTAL',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/CRISTAL.JPG',
+    fotoUrl: 'imagenes/CRISTAL.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -332,7 +332,7 @@
     sustantivo: 'CUELLO',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/CUELLO.JPG',
+    fotoUrl: 'imagenes/CUELLO.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -340,7 +340,7 @@
     sustantivo: 'CUERPO',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/CUERPO.JPG',
+    fotoUrl: 'imagenes/CUERPO.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -348,7 +348,7 @@
     sustantivo: 'DELIVERY',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/DELIVERY.JPG',
+    fotoUrl: 'imagenes/DELIVERY.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -356,7 +356,7 @@
     sustantivo: 'DESCUENTOS',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/DESCUENTOS.JPG',
+    fotoUrl: 'imagenes/DESCUENTOS.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -364,7 +364,7 @@
     sustantivo: 'DESVIO',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/DESVIO.JPG',
+    fotoUrl: 'imagenes/DESVIO.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -372,7 +372,7 @@
     sustantivo: 'DIA',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/DIA.JPG',
+    fotoUrl: 'imagenes/DIA.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -380,7 +380,7 @@
     sustantivo: 'DIA',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/DIA2.JPG',
+    fotoUrl: 'imagenes/DIA2.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -388,7 +388,7 @@
     sustantivo: 'DIAS',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/DIAS.JPG',
+    fotoUrl: 'imagenes/DIAS.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -396,7 +396,7 @@
     sustantivo: 'DOLOR',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/DOLOR.JPG',
+    fotoUrl: 'imagenes/DOLOR.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -404,7 +404,7 @@
     sustantivo: 'DOMINO',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/DOMINO.JPG',
+    fotoUrl: 'imagenes/DOMINO.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -412,7 +412,7 @@
     sustantivo: 'DUENOS',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/DUENOS.JPG',
+    fotoUrl: 'imagenes/DUENOS.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -420,7 +420,7 @@
     sustantivo: 'EDIFICIO',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/EDIFICIO.JPG',
+    fotoUrl: 'imagenes/EDIFICIO.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -428,7 +428,7 @@
     sustantivo: 'EMPANADAS',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/EMPANADAS.JPG',
+    fotoUrl: 'imagenes/EMPANADAS.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -436,7 +436,7 @@
     sustantivo: 'ENTRADA',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/ENTRADA.JPG',
+    fotoUrl: 'imagenes/ENTRADA.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -444,7 +444,7 @@
     sustantivo: 'ENTREGA',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/ENTREGA.JPG',
+    fotoUrl: 'imagenes/ENTREGA.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -452,7 +452,7 @@
     sustantivo: 'ESPECIALES',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/ESPECIALES.JPG',
+    fotoUrl: 'imagenes/ESPECIALES.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -460,7 +460,7 @@
     sustantivo: 'ESPEJOS',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/ESPEJOS.JPG',
+    fotoUrl: 'imagenes/ESPEJOS.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -468,7 +468,7 @@
     sustantivo: 'ESQUINA',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/ESQUINA.JPG',
+    fotoUrl: 'imagenes/ESQUINA.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -476,7 +476,7 @@
     sustantivo: 'ESTABLECIMIENTO',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/ESTABLECIMIENTO.JPG',
+    fotoUrl: 'imagenes/ESTABLECIMIENTO.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -484,7 +484,7 @@
     sustantivo: 'ESTACIONAMIENTO',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/ESTACIONAMIENTO.JPG',
+    fotoUrl: 'imagenes/ESTACIONAMIENTO.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -492,7 +492,7 @@
     sustantivo: 'ESTADO',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/ESTADO.JPG',
+    fotoUrl: 'imagenes/ESTADO.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -500,7 +500,7 @@
     sustantivo: 'ESTUDIO',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/ESTUDIO.JPG',
+    fotoUrl: 'imagenes/ESTUDIO.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -508,7 +508,7 @@
     sustantivo: 'FACIAL',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/FACIAL.JPG',
+    fotoUrl: 'imagenes/FACIAL.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -516,7 +516,7 @@
     sustantivo: 'FAMILIA',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/FAMILIA.JPG',
+    fotoUrl: 'imagenes/FAMILIA.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -524,7 +524,7 @@
     sustantivo: 'FIAMBRES',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/FIAMBRES.JPG',
+    fotoUrl: 'imagenes/FIAMBRES.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -532,7 +532,7 @@
     sustantivo: 'FIBRA',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/FIBRA.JPG',
+    fotoUrl: 'imagenes/FIBRA.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -540,7 +540,7 @@
     sustantivo: 'FOTOCOPIAS',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/FOTOCOPIAS.JPG',
+    fotoUrl: 'imagenes/FOTOCOPIAS.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -548,7 +548,7 @@
     sustantivo: 'FUTURO',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/FUTURO.JPG',
+    fotoUrl: 'imagenes/FUTURO.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -556,7 +556,7 @@
     sustantivo: 'GAS',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/GAS.JPG',
+    fotoUrl: 'imagenes/GAS.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -564,7 +564,7 @@
     sustantivo: 'GRANJA',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/GRANJA.JPG',
+    fotoUrl: 'imagenes/GRANJA.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -572,7 +572,7 @@
     sustantivo: 'GRUA',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/GRUA.JPG',
+    fotoUrl: 'imagenes/GRUA.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -580,7 +580,7 @@
     sustantivo: 'HAMBURGUESAS',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/HAMBURGUESAS.JPG',
+    fotoUrl: 'imagenes/HAMBURGUESAS.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -588,7 +588,7 @@
     sustantivo: 'HELADO',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/HELADO.JPG',
+    fotoUrl: 'imagenes/HELADO.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -596,7 +596,7 @@
     sustantivo: 'HERRAJES',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/HERRAJES.JPG',
+    fotoUrl: 'imagenes/HERRAJES.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -604,7 +604,7 @@
     sustantivo: 'HOGAR',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/HOGAR.JPG',
+    fotoUrl: 'imagenes/HOGAR.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -612,7 +612,7 @@
     sustantivo: 'HOGAR',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/HOGAR2.JPG',
+    fotoUrl: 'imagenes/HOGAR2.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -620,7 +620,7 @@
     sustantivo: 'HORA',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/HORA.JPG',
+    fotoUrl: 'imagenes/HORA.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -628,7 +628,7 @@
     sustantivo: 'IMAGEN',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/IMAGEN.JPG',
+    fotoUrl: 'imagenes/IMAGEN.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -636,7 +636,7 @@
     sustantivo: 'INMUEBLES',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/INMUEBLES.JPG',
+    fotoUrl: 'imagenes/INMUEBLES.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -644,7 +644,7 @@
     sustantivo: 'INSTINTOS',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/INSTINTOS.JPG',
+    fotoUrl: 'imagenes/INSTINTOS.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -652,7 +652,7 @@
     sustantivo: 'INSUMOS',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/INSUMOS.JPG',
+    fotoUrl: 'imagenes/INSUMOS.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -660,7 +660,7 @@
     sustantivo: 'KIOSCO',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/KIOSCO.JPG',
+    fotoUrl: 'imagenes/KIOSCO.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -668,7 +668,7 @@
     sustantivo: 'LEONAS',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/LEONAS.JPG',
+    fotoUrl: 'imagenes/LEONAS.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -676,7 +676,7 @@
     sustantivo: 'LIBROS',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/LIBROS.JPG',
+    fotoUrl: 'imagenes/LIBROS.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -684,7 +684,7 @@
     sustantivo: 'LIDER',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/LIDER.JPG',
+    fotoUrl: 'imagenes/LIDER.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -692,7 +692,7 @@
     sustantivo: 'LINEA',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/LINEA.JPG',
+    fotoUrl: 'imagenes/LINEA.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -700,7 +700,7 @@
     sustantivo: 'LLAMAS',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/LLAMAS.JPG',
+    fotoUrl: 'imagenes/LLAMAS.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -708,7 +708,7 @@
     sustantivo: 'LOMITO',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/LOMITO.JPG',
+    fotoUrl: 'imagenes/LOMITO.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -716,7 +716,7 @@
     sustantivo: 'LUGAR',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/LUGAR.JPG',
+    fotoUrl: 'imagenes/LUGAR.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -724,7 +724,7 @@
     sustantivo: 'LUGAR',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/LUGAR2.JPG',
+    fotoUrl: 'imagenes/LUGAR2.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -732,7 +732,7 @@
     sustantivo: 'MAGIA',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/MAGIA.JPG',
+    fotoUrl: 'imagenes/MAGIA.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -740,7 +740,7 @@
     sustantivo: 'MAGIA',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/MAGIA2.JPG',
+    fotoUrl: 'imagenes/MAGIA2.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -748,7 +748,7 @@
     sustantivo: 'MARISCOS',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/MARISCOS.JPG',
+    fotoUrl: 'imagenes/MARISCOS.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -756,7 +756,7 @@
     sustantivo: 'MATE',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/MATE.JPG',
+    fotoUrl: 'imagenes/MATE.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -764,7 +764,7 @@
     sustantivo: 'MES',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/MES.JPG',
+    fotoUrl: 'imagenes/MES.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -772,7 +772,7 @@
     sustantivo: 'MES',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/MES2.JPG',
+    fotoUrl: 'imagenes/MES2.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -780,7 +780,7 @@
     sustantivo: 'MOMENTO',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/MOMENTO.JPG',
+    fotoUrl: 'imagenes/MOMENTO.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -788,7 +788,7 @@
     sustantivo: 'MONTES',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/MONTES.JPG',
+    fotoUrl: 'imagenes/MONTES.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -796,7 +796,7 @@
     sustantivo: 'MORTADELA',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/MORTADELA.JPG',
+    fotoUrl: 'imagenes/MORTADELA.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -804,7 +804,7 @@
     sustantivo: 'MOTOS',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/MOTOS.JPG',
+    fotoUrl: 'imagenes/MOTOS.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -812,7 +812,7 @@
     sustantivo: 'MUERTE',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/MUERTE.JPG',
+    fotoUrl: 'imagenes/MUERTE.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -820,7 +820,7 @@
     sustantivo: 'NINO',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/NINO.JPG',
+    fotoUrl: 'imagenes/NINO.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -828,7 +828,7 @@
     sustantivo: 'NORMAS',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/NORMAS.JPG',
+    fotoUrl: 'imagenes/NORMAS.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -836,7 +836,7 @@
     sustantivo: 'NORTE',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/NORTE.JPG',
+    fotoUrl: 'imagenes/NORTE.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -844,7 +844,7 @@
     sustantivo: 'OFERTA',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/OFERTA.JPG',
+    fotoUrl: 'imagenes/OFERTA.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -852,7 +852,7 @@
     sustantivo: 'OPORTUNIDADES',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/OPORTUNIDADES.JPG',
+    fotoUrl: 'imagenes/OPORTUNIDADES.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -860,7 +860,7 @@
     sustantivo: 'OPORTUNIDADES',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/OPORTUNIDADES2.JPG',
+    fotoUrl: 'imagenes/OPORTUNIDADES2.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -868,7 +868,7 @@
     sustantivo: 'ORGASMO',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/ORGASMO.JPG',
+    fotoUrl: 'imagenes/ORGASMO.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -876,7 +876,7 @@
     sustantivo: 'ORO',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/ORO.JPG',
+    fotoUrl: 'imagenes/ORO.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -884,7 +884,7 @@
     sustantivo: 'ORTOPEDIA',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/ORTOPEDIA.JPG',
+    fotoUrl: 'imagenes/ORTOPEDIA.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -892,7 +892,7 @@
     sustantivo: 'PACKS',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/PACKS.JPG',
+    fotoUrl: 'imagenes/PACKS.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -900,7 +900,7 @@
     sustantivo: 'PADRE',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/PADRE.JPG',
+    fotoUrl: 'imagenes/PADRE.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -908,7 +908,7 @@
     sustantivo: 'PALABRAS',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/PALABRAS.JPG',
+    fotoUrl: 'imagenes/PALABRAS.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -916,7 +916,7 @@
     sustantivo: 'PANCHOS',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/PANCHOS.JPG',
+    fotoUrl: 'imagenes/PANCHOS.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -924,7 +924,7 @@
     sustantivo: 'PANCHOS',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/PANCHOS2.JPG',
+    fotoUrl: 'imagenes/PANCHOS2.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -932,7 +932,7 @@
     sustantivo: 'PASTAS',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/PASTAS.JPG',
+    fotoUrl: 'imagenes/PASTAS.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -940,7 +940,7 @@
     sustantivo: 'PASTAS',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/PASTAS2.JPG',
+    fotoUrl: 'imagenes/PASTAS2.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -948,7 +948,7 @@
     sustantivo: 'PELIGRO',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/PELIGRO.JPG',
+    fotoUrl: 'imagenes/PELIGRO.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -956,7 +956,7 @@
     sustantivo: 'PELIGRO',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/PELIGRO2.JPG',
+    fotoUrl: 'imagenes/PELIGRO2.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -964,7 +964,7 @@
     sustantivo: 'PELOS',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/PELOS.JPG',
+    fotoUrl: 'imagenes/PELOS.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -972,7 +972,7 @@
     sustantivo: 'PERFUMERIA',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/PERFUMERIA.JPG',
+    fotoUrl: 'imagenes/PERFUMERIA.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -980,7 +980,7 @@
     sustantivo: 'PERSONAS',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/PERSONAS.JPG',
+    fotoUrl: 'imagenes/PERSONAS.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -988,7 +988,7 @@
     sustantivo: 'PIEDAD',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/PIEDAD.JPG',
+    fotoUrl: 'imagenes/PIEDAD.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -996,7 +996,7 @@
     sustantivo: 'PIEDAD',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/PIEDAD2.JPG',
+    fotoUrl: 'imagenes/PIEDAD2.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -1004,7 +1004,7 @@
     sustantivo: 'PIEL',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/PIEL.JPG',
+    fotoUrl: 'imagenes/PIEL.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -1012,7 +1012,7 @@
     sustantivo: 'PINTURA',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/PINTURA.JPG',
+    fotoUrl: 'imagenes/PINTURA.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -1020,7 +1020,7 @@
     sustantivo: 'PINTURAS',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/PINTURAS.JPG',
+    fotoUrl: 'imagenes/PINTURAS.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -1028,7 +1028,7 @@
     sustantivo: 'PISO',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/PISO.JPG',
+    fotoUrl: 'imagenes/PISO.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -1036,7 +1036,7 @@
     sustantivo: 'PISO',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/PISO2.JPG',
+    fotoUrl: 'imagenes/PISO2.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -1044,7 +1044,7 @@
     sustantivo: 'PIZZA',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/PIZZA.JPG',
+    fotoUrl: 'imagenes/PIZZA.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -1052,7 +1052,7 @@
     sustantivo: 'PIZZA',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/PIZZA2.JPG',
+    fotoUrl: 'imagenes/PIZZA2.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -1060,7 +1060,7 @@
     sustantivo: 'POLICIA',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/POLICIA.JPG',
+    fotoUrl: 'imagenes/POLICIA.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -1068,7 +1068,7 @@
     sustantivo: 'PORNO',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/PORNO.JPG',
+    fotoUrl: 'imagenes/PORNO.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -1076,7 +1076,7 @@
     sustantivo: 'PORNO',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/PORNO2.JPG',
+    fotoUrl: 'imagenes/PORNO2.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -1092,7 +1092,7 @@
     sustantivo: 'POZO',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/POZO.JPG',
+    fotoUrl: 'imagenes/POZO.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -1100,7 +1100,7 @@
     sustantivo: 'PROFESIONAL',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/PROFESIONAL.JPG',
+    fotoUrl: 'imagenes/PROFESIONAL.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -1108,7 +1108,7 @@
     sustantivo: 'PROMO',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/PROMO.JPG',
+    fotoUrl: 'imagenes/PROMO.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -1116,7 +1116,7 @@
     sustantivo: 'PROMO',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/PROMO2.JPG',
+    fotoUrl: 'imagenes/PROMO2.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -1124,7 +1124,7 @@
     sustantivo: 'PROPIEDAD',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/PROPIEDAD.JPG',
+    fotoUrl: 'imagenes/PROPIEDAD.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -1132,7 +1132,7 @@
     sustantivo: 'PROPIEDADES',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/PROPIEDADES.JPG',
+    fotoUrl: 'imagenes/PROPIEDADES.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -1140,7 +1140,7 @@
     sustantivo: 'PROPIEDADES',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/PROPIEDADES2.JPG',
+    fotoUrl: 'imagenes/PROPIEDADES2.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -1148,7 +1148,7 @@
     sustantivo: 'PUENTE',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/PUENTE.JPG',
+    fotoUrl: 'imagenes/PUENTE.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -1156,7 +1156,7 @@
     sustantivo: 'PUERTA',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/PUERTA.JPG',
+    fotoUrl: 'imagenes/PUERTA.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -1164,7 +1164,7 @@
     sustantivo: 'QUESADILLAS',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/QUESADILLAS.JPG',
+    fotoUrl: 'imagenes/QUESADILLAS.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -1172,7 +1172,7 @@
     sustantivo: 'QUESOS',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/QUESOS.JPG',
+    fotoUrl: 'imagenes/QUESOS.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -1180,7 +1180,7 @@
     sustantivo: 'RECETAS',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/RECETAS.JPG',
+    fotoUrl: 'imagenes/RECETAS.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -1188,7 +1188,7 @@
     sustantivo: 'RECETAS',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/RECETAS2.JPG',
+    fotoUrl: 'imagenes/RECETAS2.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -1196,7 +1196,7 @@
     sustantivo: 'REGALOS',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/REGALOS.JPG',
+    fotoUrl: 'imagenes/REGALOS.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -1204,7 +1204,7 @@
     sustantivo: 'REMISES',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/REMISES.JPG',
+    fotoUrl: 'imagenes/REMISES.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -1212,7 +1212,7 @@
     sustantivo: 'REPUESTOS',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/REPUESTOS.JPG',
+    fotoUrl: 'imagenes/REPUESTOS.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -1220,7 +1220,7 @@
     sustantivo: 'RINCON',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/RINCON.JPG',
+    fotoUrl: 'imagenes/RINCON.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -1228,7 +1228,7 @@
     sustantivo: 'ROMANCE',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/ROMANCE.JPG',
+    fotoUrl: 'imagenes/ROMANCE.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -1236,7 +1236,7 @@
     sustantivo: 'ROPA',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/ROPA.JPG',
+    fotoUrl: 'imagenes/ROPA.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -1244,7 +1244,7 @@
     sustantivo: 'SABADO',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/SABADO.JPG',
+    fotoUrl: 'imagenes/SABADO.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -1252,7 +1252,7 @@
     sustantivo: 'SALIDA',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/SALIDA.JPG',
+    fotoUrl: 'imagenes/SALIDA.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -1260,7 +1260,7 @@
     sustantivo: 'SALON',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/SALON.JPG',
+    fotoUrl: 'imagenes/SALON.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -1268,7 +1268,7 @@
     sustantivo: 'SANDWICHES',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/SANDWICHES.JPG',
+    fotoUrl: 'imagenes/SANDWICHES.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -1276,7 +1276,7 @@
     sustantivo: 'SANTERIA',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/SANTERIA.JPG',
+    fotoUrl: 'imagenes/SANTERIA.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -1284,7 +1284,7 @@
     sustantivo: 'SANTOS',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/SANTOS.JPG',
+    fotoUrl: 'imagenes/SANTOS.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -1292,7 +1292,7 @@
     sustantivo: 'SELECCIONADOS',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/SELECCIONADOS.JPG',
+    fotoUrl: 'imagenes/SELECCIONADOS.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -1300,7 +1300,7 @@
     sustantivo: 'SER',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/SER.JPG',
+    fotoUrl: 'imagenes/SER.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -1308,7 +1308,7 @@
     sustantivo: 'SER',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/SER2.JPG',
+    fotoUrl: 'imagenes/SER2.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -1316,7 +1316,7 @@
     sustantivo: 'SERVICIO',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/SERVICIO.JPG',
+    fotoUrl: 'imagenes/SERVICIO.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -1324,7 +1324,7 @@
     sustantivo: 'SILLONES',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/SILLONES.JPG',
+    fotoUrl: 'imagenes/SILLONES.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -1332,7 +1332,7 @@
     sustantivo: 'SOL',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/SOL.JPG',
+    fotoUrl: 'imagenes/SOL.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -1340,7 +1340,7 @@
     sustantivo: 'SUSHI',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/SUSHI.JPG',
+    fotoUrl: 'imagenes/SUSHI.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -1348,7 +1348,7 @@
     sustantivo: 'TALLES',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/TALLES.JPG',
+    fotoUrl: 'imagenes/TALLES.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -1356,7 +1356,7 @@
     sustantivo: 'TAXI',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/TAXI.JPG',
+    fotoUrl: 'imagenes/TAXI.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -1364,7 +1364,7 @@
     sustantivo: 'TECHO',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/TECHO.JPG',
+    fotoUrl: 'imagenes/TECHO.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -1372,7 +1372,7 @@
     sustantivo: 'TENSION',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/TENSION.JPG',
+    fotoUrl: 'imagenes/TENSION.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -1380,7 +1380,7 @@
     sustantivo: 'TERRAZA',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/TERRAZA.JPG',
+    fotoUrl: 'imagenes/TERRAZA.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -1388,7 +1388,7 @@
     sustantivo: 'TIMBRE',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/TIMBRE.JPG',
+    fotoUrl: 'imagenes/TIMBRE.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -1396,7 +1396,7 @@
     sustantivo: 'TODO',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/TODO.JPG',
+    fotoUrl: 'imagenes/TODO.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -1404,7 +1404,7 @@
     sustantivo: 'TODO',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/TODO2.JPG',
+    fotoUrl: 'imagenes/TODO2.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -1412,7 +1412,7 @@
     sustantivo: 'TRABAJO',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/TRABAJO.JPG',
+    fotoUrl: 'imagenes/TRABAJO.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -1420,7 +1420,7 @@
     sustantivo: 'TRATA',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/TRATA.JPG',
+    fotoUrl: 'imagenes/TRATA.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -1428,7 +1428,7 @@
     sustantivo: 'TROFEOS',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/TROFEOS.JPG',
+    fotoUrl: 'imagenes/TROFEOS.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -1436,7 +1436,7 @@
     sustantivo: 'TURISMO',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/TURISMO.JPG',
+    fotoUrl: 'imagenes/TURISMO.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -1444,7 +1444,7 @@
     sustantivo: 'TURNOS',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/TURNOS.JPG',
+    fotoUrl: 'imagenes/TURNOS.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -1452,7 +1452,7 @@
     sustantivo: 'TURNOS',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/TURNOS2.JPG',
+    fotoUrl: 'imagenes/TURNOS2.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -1460,7 +1460,7 @@
     sustantivo: 'TV',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/TV.JPG',
+    fotoUrl: 'imagenes/TV.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   },  {
@@ -1468,7 +1468,7 @@
     sustantivo: 'VIDA',
     barrio: 'Centro',
     categoriaVisual: 'luminoso',
-    fotoUrl: 'imagenes/VIDA.JPG',
+    fotoUrl: 'imagenes/VIDA.webp',
     nombreQuienSube: 'Lucas M.',
     aprobado: true,
   },  {
@@ -1476,7 +1476,7 @@
     sustantivo: 'VIDA',
     barrio: 'Villa Crespo',
     categoriaVisual: 'manuscrito',
-    fotoUrl: 'imagenes/VIDA2.JPG',
+    fotoUrl: 'imagenes/VIDA2.webp',
     nombreQuienSube: 'Ana R.',
     aprobado: true,
   },  {
@@ -1484,7 +1484,7 @@
     sustantivo: 'VIDA',
     barrio: 'Villa Pueyrredón',
     categoriaVisual: 'imprenta mayúscula',
-    fotoUrl: 'imagenes/VIDA3.JPG',
+    fotoUrl: 'imagenes/VIDA3.webp',
     nombreQuienSube: 'Sofía T.',
     aprobado: true,
   },  {
@@ -1492,7 +1492,7 @@
     sustantivo: 'VIDRIO',
     barrio: 'Recoleta',
     categoriaVisual: 'cursiva',
-    fotoUrl: 'imagenes/VIDRIO.JPG',
+    fotoUrl: 'imagenes/VIDRIO.webp',
     nombreQuienSube: 'Martín L.',
     aprobado: true,
   },  {
@@ -1500,7 +1500,7 @@
     sustantivo: 'VIDRIOS',
     barrio: 'San Telmo',
     categoriaVisual: 'sobre vidrio',
-    fotoUrl: 'imagenes/VIDRIOS.JPG',
+    fotoUrl: 'imagenes/VIDRIOS.webp',
     nombreQuienSube: 'Carla P.',
     aprobado: true,
   },  {
@@ -1508,7 +1508,7 @@
     sustantivo: 'VIOLINES',
     barrio: 'Belgrano',
     categoriaVisual: 'relieve',
-    fotoUrl: 'imagenes/VIOLINES.JPG',
+    fotoUrl: 'imagenes/VIOLINES.webp',
     nombreQuienSube: 'Elena V.',
     aprobado: true,
   },  {
@@ -1516,7 +1516,7 @@
     sustantivo: 'YOGUR',
     barrio: 'Palermo',
     categoriaVisual: 'estencil',
-    fotoUrl: 'imagenes/YOGUR.JPG',
+    fotoUrl: 'imagenes/YOGUR.webp',
     nombreQuienSube: 'Paloma G.',
     aprobado: true,
   }]
