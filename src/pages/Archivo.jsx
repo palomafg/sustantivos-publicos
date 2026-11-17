@@ -29,9 +29,9 @@ export default function Archivo() {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <Navbar />
+      {!selectedWord && <Navbar />}
 
-      <main className="relative pt-20 sm:pt-24 pb-8 sm:pb-12 px-3 sm:px-4 lg:px-6 w-full max-w-none">
+      <main className={`relative ${selectedWord ? 'pt-0 sm:pt-0' : 'pt-20 sm:pt-24'} pb-8 sm:pb-12 px-3 sm:px-4 lg:px-6 w-full max-w-none`}>
         <CriterionSelector
           current={criterion}
           onChange={setCriterion}
@@ -55,10 +55,12 @@ export default function Archivo() {
           )}
         </div>
 
-        <footer className="mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200 text-gray-500 text-xs sm:text-sm">
-          <p>Archivo colectivo de la Ciudad Autónoma de Buenos Aires</p>
-          <p className="mt-1 text-[10px] sm:text-xs">Paloma González — 2026</p>
-        </footer>
+        {!selectedWord && (
+          <footer className="mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200 text-gray-500 text-xs sm:text-sm">
+            <p>Archivo colectivo de palabras encontradas en la Ciudad Autónoma de Buenos Aires</p>
+            <p className="mt-1 text-[10px] sm:text-xs">Paloma González — 2026</p>
+          </footer>
+        )}
       </main>
     </div>
   )

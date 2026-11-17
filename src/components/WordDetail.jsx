@@ -43,13 +43,18 @@ export function WordDetail({ word: wordProp, onClose, words: wordsProp }) {
   }, [isMobile, allWords, mobileCount])
 
   const handleClose = () => {
-    if (onClose) onClose()
-    navigate('/archivo')
+    if (onClose) {
+      // Se usa como modal dentro de /archivo o /archivo/:barrio: solo cierra el detalle
+      onClose()
+    } else {
+      // Se usa como ruta independiente /palabra/:id: vuelve a la página anterior
+      navigate(-1)
+    }
   }
 
   if (!word.sustantivo) {
     return (
-      <div className="fixed inset-0 bg-white z-50 flex flex-col p-4 sm:p-6">
+      <div className="fixed inset-0 bg-white z-[100] flex flex-col p-4 sm:p-6">
         <button onClick={handleClose} className="mb-4 text-gray-500 hover:text-gray-900">
           ×
         </button>
@@ -63,7 +68,7 @@ export function WordDetail({ word: wordProp, onClose, words: wordsProp }) {
   return (
     <>
       {/* Fondo: grilla de palabras con opacidad 15% */}
-      <div className="fixed inset-0 z-50 pointer-events-none">
+      <div className="fixed inset-0 z-[100] pointer-events-none">
         <div
           className={
             isMobile
@@ -84,7 +89,7 @@ export function WordDetail({ word: wordProp, onClose, words: wordsProp }) {
 
       {/* Recuadro del detalle */}
       <div
-        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-lg sm:max-w-xl md:max-w-2xl p-4 sm:p-6 bg-white rounded-xl shadow-2xl overflow-y-auto max-h-[90vh] sm:max-h-[85vh]"
+        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[100] w-full max-w-lg sm:max-w-xl md:max-w-2xl p-4 sm:p-6 bg-white rounded-xl shadow-2xl overflow-y-auto max-h-[90vh] sm:max-h-[85vh]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* X cerrar a la derecha */}

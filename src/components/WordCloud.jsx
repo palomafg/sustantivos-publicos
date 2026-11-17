@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { WordItem } from './WordItem'
 import { LazyImage } from './LazyImage'
@@ -5,20 +6,23 @@ import { LazyImage } from './LazyImage'
 export function WordCloud({ words, criterion, onSelect }) {
   const navigate = useNavigate()
 
-  // Orden random para la grilla de "Todos"
-  const shuffled = [...words].sort(() => Math.random() - 0.5)
+  // Orden random para la grilla de "Todos" (se calcula una sola vez)
+  const shuffled = useMemo(() => [...words].sort(() => Math.random() - 0.5), [words])
 
   const isGrid = criterion === 'todos'
   const isBarrio = criterion === 'barrio'
 
   // Agrupar por barrio para el criterio "Ubicacion"
-  const palabrasPorBarrio = {}
-  words.forEach((w) => {
-    if (!palabrasPorBarrio[w.barrio]) {
-      palabrasPorBarrio[w.barrio] = []
-    }
-    palabrasPorBarrio[w.barrio].push(w)
-  })
+  const palabrasPorBarrio = useMemo(() => {
+    const grouped = {}
+    words.forEach((w) => {
+      if (!grouped[w.barrio]) {
+        grouped[w.barrio] = []
+      }
+      grouped[w.barrio].push(w)
+    })
+    return grouped
+  }, [words])
 
   return (
     <div
@@ -40,6 +44,7 @@ export function WordCloud({ words, criterion, onSelect }) {
               word={word}
               style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
               className='word-item relative select-none group cursor-pointer opacity-pulse'
+              onSelect={onSelect}
             />
           ))}
         </div>
@@ -47,8 +52,12 @@ export function WordCloud({ words, criterion, onSelect }) {
         <div className="p-0 w-full">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-2 sm:gap-3 w-full">
             {Object.entries(palabrasPorBarrio).map(([barrio, barrioWords]) => (
-              <div key={barrio} className="relative w-full min-h-[200px]">
-                <div className="relative w-full h-full flex items-center justify-center overflow-hidden bg-white">
+              <div
+                key={barrio}
+                className="relative w-full overflow-visible cursor-pointer my-2 sm:my-3"
+                onClick={() => navigate(`/archivo/${barrio.toLowerCase()}`)}
+              >
+                <div className="relative w-full h-[120px] sm:h-[160px] flex items-center justify-center overflow-hidden bg-white">
                   {barrioWords.map((word, index) => {
                     const seed = word.id.charCodeAt(0) + word.id.charCodeAt(word.id.length - 1)
                     const pulseDuration = 3 + (seed % 6)
@@ -57,7 +66,7 @@ export function WordCloud({ words, criterion, onSelect }) {
                     return (
                       <div
                         key={word.id}
-                        className="absolute select-none group cursor-pointer opacity-pulse"
+                        className="absolute select-none group opacity-pulse"
                         style={{
                           top: '50%',
                           left: '50%',
@@ -71,9 +80,6 @@ export function WordCloud({ words, criterion, onSelect }) {
                           animationDuration: `${pulseDuration}s`,
                           animationDelay: `${pulseDelay}s`,
                         }}
-                        onClick={() => {
-                          navigate(`/palabra/${word.id}`)
-                        }}
                       >
                         <LazyImage
                           src={word.fotoUrl}
@@ -83,6 +89,11 @@ export function WordCloud({ words, criterion, onSelect }) {
                       </div>
                     )
                   })}
+                </div>
+                <div className="mt-1 sm:mt-1 flex justify-center">
+                  <span className="text-[10px] sm:text-xs font-medium uppercase tracking-[0.12em] text-gray-700 leading-none">
+                    {barrio}
+                  </span>
                 </div>
               </div>
             ))}
