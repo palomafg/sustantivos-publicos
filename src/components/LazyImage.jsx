@@ -1,23 +1,24 @@
 import { useState, useEffect } from 'react'
 
 /**
- * Imagen que solo descarga su recurso cuando entra al viewport.
- * El elemento <img> siempre está en el DOM (preserva layout),
- * pero el src solo se asigna cuando es visible.
+ * Imagen con lazy loading nativo del navegador (loading="lazy").
+ * Nunca deja el src en undefined para evitar parpadeos blancos
+ * al cambiar de palabra (crossfade).
+ * El IntersectionObserver se mantiene solo como gancho opcional,
+ * pero no controla el atributo src.
  */
 export function LazyImage({ src, alt, className, style, loading = 'lazy', decoding = 'async', onError }) {
-  const [isVisible, setIsVisible] = useState(false)
   const [node, setNode] = useState(null)
 
   useEffect(() => {
     if (!node) return
-    if (!('IntersectionObserver' in window)) {
-      setIsVisible(true)
-      return
-    }
+    if (!('IntersectionObserver' in window)) return
     const observer = new IntersectionObserver(
-      ([entry]) => setIsVisible(entry.isIntersecting),
-      { threshold: 0, rootMargin: '200px' }
+      ([entry]) => {
+        // Gancho disponible si se necesita en el futuro;
+        // el src se gestiona directamente con loading="lazy".
+      },
+      { threshold: 0, rootMargin: '100px' }
     )
     observer.observe(node)
     return () => observer.disconnect()
@@ -26,7 +27,7 @@ export function LazyImage({ src, alt, className, style, loading = 'lazy', decodi
   return (
     <img
       ref={setNode}
-      src={isVisible ? src : undefined}
+      src={src}
       alt={alt}
       className={className}
       loading={loading}

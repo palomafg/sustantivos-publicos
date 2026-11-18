@@ -1,25 +1,42 @@
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { LazyImage } from './LazyImage'
+import { HomeSlot } from './HomeSlot'
 
-const BACKGROUND_COUNT = 20
 const ROTATION_MS = 5000
 const HINT_DELAY_MS = 2000
 
+const SLOT_COUNT = 20
+
 export function Home({ words }) {
   const navigate = useNavigate()
-  const [visibleWords, setVisibleWords] = useState([])
   const [showHint, setShowHint] = useState(false)
   const [interacted, setInteracted] = useState(false)
   const hintRef = useRef(null)
 
+  // Slots fijos: cada uno mantiene una palabra de fondo.
+  // Cada 5s se reemplaza solo UNA palabra de un slot al azar (no las 20 de golpe).
+  const [slotWords, setSlotWords] = useState([])
+
   useEffect(() => {
-    const pickRandom = () => {
-      const shuffled = [...words].sort(() => Math.random() - 0.5)
-      setVisibleWords(shuffled.slice(0, BACKGROUND_COUNT))
+    const initial = []
+    for (let i = 0; i < SLOT_COUNT; i++) {
+      const w = words[Math.floor(Math.random() * words.length)]
+      initial.push({ slotId: i, word: w })
     }
-    pickRandom()
-    const interval = setInterval(pickRandom, ROTATION_MS)
+    setSlotWords(initial)
+
+    const interval = setInterval(() => {
+      setSlotWords((prev) => {
+        const next = [...prev]
+        const slotIdx = Math.floor(Math.random() * SLOT_COUNT)
+        const available = words.filter((w) => w.id !== next[slotIdx].word.id)
+        if (available.length === 0) return next
+        const newWord = available[Math.floor(Math.random() * available.length)]
+        next[slotIdx] = { slotId: slotIdx, word: newWord }
+        return next
+      })
+    }, ROTATION_MS)
+
     return () => clearInterval(interval)
   }, [words])
 
@@ -45,46 +62,17 @@ export function Home({ words }) {
     navigate('/todos')
   }
 
-  const items = visibleWords.map((word, index) => {
-    const seed = word.id.charCodeAt(0) + word.id.charCodeAt(word.id.length - 1)
-    const style = {
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100vw',
-      height: '100vh',
-      maxWidth: 'none',
-      maxHeight: 'none',
-      opacity: 0.05,
-      animation: 'opacity-pulse ease-in-out infinite',
-      animationDuration: `${1 + (seed % 10)}s`,
-      animationDelay: `${(seed % 10) * 0.4}s`,
-    }
-    return {
-      ...word,
-      style,
-      className: 'word-item absolute select-none group cursor-pointer opacity-pulse',
-    }
-  })
-
   return (
     <div
       className="relative w-full h-screen select-none bg-white overflow-hidden"
       onClick={handleEnter}
     >
-      {items.map((word) => (
-        <div
-          key={word.id}
-          className={word.className}
-          style={word.style}
-        >
-          <LazyImage
-            src={word.fotoUrl}
-            alt={word.sustantivo}
-            className="w-full h-full object-cover"
-            style={{ width: '100%', height: '100%' }}
-          />
-        </div>
+      {slotWords.map(({ slotId, word }) => (
+        <HomeSlot
+          key={`home-slot-${slotId}`}
+          slotId={slotId}
+          word={word}
+        />
       ))}
 
       {showHint && (

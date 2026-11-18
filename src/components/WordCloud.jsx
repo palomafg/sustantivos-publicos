@@ -1,7 +1,7 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { WordItem } from './WordItem'
-import { LazyImage } from './LazyImage'
+import { WordSlot } from './WordSlot'
 
 const STORAGE_KEY = 'sustantivos-orden-todos'
 
@@ -9,7 +9,6 @@ export function WordCloud({ words, criterion, onSelect }) {
   const navigate = useNavigate()
 
   // Orden aleatorio persistente para la grilla de "Todos"
-  // Se genera una sola vez (primera visita) y se guarda en localStorage del navegador
   const [savedOrder, setSavedOrder] = useState(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY)
@@ -19,7 +18,6 @@ export function WordCloud({ words, criterion, onSelect }) {
     }
   })
 
-  // Construir array de palabras ordenado según el orden persistente
   const orderedWords = useMemo(() => {
     const order = savedOrder || [...words].sort(() => Math.random() - 0.5).map((w) => w.id)
     if (!savedOrder) {
@@ -49,6 +47,44 @@ export function WordCloud({ words, criterion, onSelect }) {
     return grouped
   }, [words])
 
+  const wordById = useMemo(() => new Map(words.map((w) => [w.id, w])), [words])
+
+  // Slots fijos por barrio: 15 palabras por barrio.
+  // Cada 5s se reemplaza solo UNA palabra por barrio (rotación sutil, como en Home).
+  const [slotWords, setSlotWords] = useState({})
+
+  useEffect(() => {
+    if (!isBarrio) return
+
+    // Inicializar: 15 palabras al azar por barrio
+    const initial = {}
+    Object.entries(palabrasPorBarrio).forEach(([barrio, barrioWords]) => {
+      const shuffled = [...barrioWords].sort(() => Math.random() - 0.5)
+      initial[barrio] = shuffled.slice(0, 15).map((w) => w.id)
+    })
+    setSlotWords(initial)
+
+    const interval = setInterval(() => {
+      setSlotWords((prev) => {
+        const next = { ...prev }
+        Object.entries(palabrasPorBarrio).forEach(([barrio, barrioWords]) => {
+          const currentIds = prev[barrio] || []
+          const available = barrioWords.filter((w) => !currentIds.includes(w.id))
+          if (available.length === 0) return
+
+          const newIds = [...currentIds]
+          const pos = Math.floor(Math.random() * newIds.length)
+          const newWord = available[Math.floor(Math.random() * available.length)]
+          newIds[pos] = newWord.id
+          next[barrio] = newIds
+        })
+        return next
+      })
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [isBarrio, palabrasPorBarrio])
+
   return (
     <div
       className="relative w-full select-none bg-gray-50/50 border border-gray-100"
@@ -76,52 +112,37 @@ export function WordCloud({ words, criterion, onSelect }) {
       ) : isBarrio ? (
         <div className="p-0 w-full">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-2 sm:gap-3 w-full">
-            {Object.entries(palabrasPorBarrio).map(([barrio, barrioWords]) => (
-              <div
-                key={barrio}
-                className="relative w-full overflow-visible cursor-pointer my-2 sm:my-3"
-                onClick={() => navigate(`/ubicacion/${barrio.toLowerCase()}`)}
-              >
-                <div className="relative w-full h-[120px] sm:h-[160px] flex items-center justify-center overflow-hidden bg-white">
-                  {barrioWords.map((word, index) => {
-                    const seed = word.id.charCodeAt(0) + word.id.charCodeAt(word.id.length - 1)
-                    const pulseDuration = 3 + (seed % 6)
-                    const pulseDelay = index * 0.4
+            {Object.entries(palabrasPorBarrio).map(([barrio, barrioWords]) => {
+              const visibleIds = slotWords[barrio] || barrioWords.slice(0, 15).map((w) => w.id)
+              const visibleWords = visibleIds.map((id) => wordById.get(id)).filter(Boolean)
 
-                    return (
-                      <div
-                        key={word.id}
-                        className="absolute select-none group opacity-pulse"
-                        style={{
-                          top: '50%',
-                          left: '50%',
-                          transform: 'translate(-50%, -50%)',
-                          width: '100%',
-                          height: '100%',
-                          maxWidth: 'none',
-                          maxHeight: 'none',
-                          opacity: 0.05,
-                          animation: 'opacity-pulse ease-in-out infinite',
-                          animationDuration: `${pulseDuration}s`,
-                          animationDelay: `${pulseDelay}s`,
-                        }}
-                      >
-                        <LazyImage
-                          src={word.fotoUrl}
-                          alt={word.sustantivo}
-                          className="w-full h-full object-contain"
+              return (
+                <div
+                  key={`barrio-${barrio}`}
+                  className="relative w-full overflow-visible cursor-pointer my-2 sm:my-3"
+                  onClick={() => navigate(`/ubicacion/${barrio.toLowerCase()}`)}
+                >
+                  <div className="relative w-full h-[120px] sm:h-[160px] flex items-center justify-center overflow-hidden bg-white">
+                    {visibleWords.map((word, index) => {
+                      const seed = word.id.charCodeAt(0) + word.id.charCodeAt(word.id.length - 1)
+                      return (
+                        <WordSlot
+                          key={`slot-${barrio}-${index}`}
+                          word={word}
+                          index={index}
+                          seed={seed}
                         />
-                      </div>
-                    )
-                  })}
+                      )
+                    })}
+                  </div>
+                  <div className="mt-1 sm:mt-1 flex justify-center">
+                    <span className="text-[10px] sm:text-xs font-medium uppercase tracking-[0.12em] text-gray-700 leading-none">
+                      {barrio}
+                    </span>
+                  </div>
                 </div>
-                <div className="mt-1 sm:mt-1 flex justify-center">
-                  <span className="text-[10px] sm:text-xs font-medium uppercase tracking-[0.12em] text-gray-700 leading-none">
-                    {barrio}
-                  </span>
-                </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       ) : (

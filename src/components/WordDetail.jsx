@@ -1,6 +1,8 @@
 ﻿import { LazyImage } from './LazyImage'
+import { useNavigate } from 'react-router-dom'
 
 export function WordDetail({ word, onClose }) {
+  const navigate = useNavigate()
   const handleClose = () => {
     // Siempre se usa como modal: solo cierra el detalle sin recargar la página
     onClose?.()
@@ -69,7 +71,7 @@ export function WordDetail({ word, onClose }) {
         {/* Footer con link al archivo colectivo */}
         <div className="pt-4 sm:pt-6 border-t border-gray-200">
           <p className="text-gray-500 text-xs sm:text-sm">
-            Esta palabra forma parte del <span className="text-black underline underline-offset-2 hover:no-underline cursor-pointer">archivo colectivo</span>.
+            Esta palabra forma parte del <span className="text-black underline underline-offset-2 hover:no-underline cursor-pointer" onClick={() => navigate('/')}>archivo colectivo</span>.
           </p>
         </div>
       </div>
