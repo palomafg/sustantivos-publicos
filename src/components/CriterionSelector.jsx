@@ -25,7 +25,7 @@ export function CriterionSelector({ current, onChange }) {
   }
 
   return (
-    <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
+    <div className="flex flex-wrap gap-2 sm:gap-3">
       {criteria.map((c) => (
         <button
           key={c.value}

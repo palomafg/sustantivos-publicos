@@ -16,13 +16,16 @@ export default function Archivo({ initialCriterion = 'todos' }) {
     <div className="min-h-screen relative overflow-hidden">
       <Navbar />
 
-      <main className="relative pt-20 sm:pt-24 pb-8 sm:pb-12 px-3 sm:px-4 lg:px-6 w-full max-w-none">
-        <CriterionSelector
-          current={criterion}
-          onChange={setCriterion}
-        />
+      <main className="relative pt-36 sm:pt-40 pb-8 sm:pb-12 px-3 sm:px-4 lg:px-6 w-full max-w-none">
+        {/* Selector de criterio flotante debajo del Navbar */}
+        <div className="fixed top-[66px] sm:top-[74px] left-0 right-0 z-[60] bg-white/95 backdrop-blur border-t border-b border-gray-200 px-3 sm:px-4 py-2 sm:py-3 justify-center items-center">
+          <CriterionSelector
+            current={criterion}
+            onChange={setCriterion}
+          />
+        </div>
 
-        <div className="mt-4 sm:mt-8 relative w-full" style={{ minHeight: '60vh sm:75vh', position: 'relative', overflowX: 'hidden' }}>
+        <div className="mt-2 sm:mt-4 relative w-full" style={{ minHeight: '60vh sm:75vh', position: 'relative', overflowX: 'hidden' }}>
           <div className="relative left-1/2 -translate-x-1/2 w-screen max-w-none">
             <WordCloud
               words={approvedWords}
