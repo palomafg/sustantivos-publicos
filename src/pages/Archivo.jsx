@@ -25,7 +25,7 @@ export default function Archivo({ initialCriterion = 'todos' }) {
           />
         </div>
 
-        <div className="mt-2 sm:mt-4 relative w-full" style={{ minHeight: '60vh sm:75vh', position: 'relative', overflowX: 'hidden' }}>
+        <div className="mt-1 sm:mt-2 relative w-full" style={{ minHeight: '60vh sm:75vh', position: 'relative', overflowX: 'hidden' }}>
           <div className="relative left-1/2 -translate-x-1/2 w-screen max-w-none">
             <WordCloud
               words={approvedWords}
