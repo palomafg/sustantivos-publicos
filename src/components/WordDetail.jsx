@@ -1,58 +1,12 @@
-﻿import { useParams, useNavigate } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-import { mockWords } from '../data/mockWords'
-import { LazyImage } from './LazyImage'
+﻿import { LazyImage } from './LazyImage'
 
-const MOBILE_BREAKPOINT = 1024 // tablets y móviles usan la grilla reducida
-
-export function WordDetail({ word: wordProp, onClose, words: wordsProp }) {
-  const { id } = useParams()
-  const navigate = useNavigate()
-  const [isMobile, setIsMobile] = useState(
-    typeof window !== 'undefined' ? window.innerWidth < MOBILE_BREAKPOINT : false
-  )
-
-  // Filas necesarias para cubrir el alto de la ventana (3 columnas)
-  // Usamos 80px como estimado conservador de alto de imagen para asegurar cobertura
-  const [mobileRows, setMobileRows] = useState(
-    typeof window !== 'undefined' ? Math.ceil(window.innerHeight / 80) + 1 : 8
-  )
-
-  useEffect(() => {
-    const onResize = () => {
-      setIsMobile(window.innerWidth < MOBILE_BREAKPOINT)
-      setMobileRows(Math.ceil(window.innerHeight / 80) + 1)
-    }
-    window.addEventListener('resize', onResize)
-    return () => window.removeEventListener('resize', onResize)
-  }, [])
-
-  const word = wordProp || mockWords.find(w => w.id === id) || { id }
-  const allWords = wordsProp || mockWords
-
-  // En móvil/tablet: grilla de 3 columnas con filas suficientes para cubrir el alto
-  const mobileCount = mobileRows * 3
-  const [mobileBg, setMobileBg] = useState([])
-  useEffect(() => {
-    if (isMobile) {
-      const shuffled = [...allWords].sort(() => Math.random() - 0.5)
-      setMobileBg(shuffled.slice(0, mobileCount))
-    } else {
-      setMobileBg([])
-    }
-  }, [isMobile, allWords, mobileCount])
-
+export function WordDetail({ word, onClose }) {
   const handleClose = () => {
-    if (onClose) {
-      // Se usa como modal dentro de /archivo o /archivo/:barrio: solo cierra el detalle
-      onClose()
-    } else {
-      // Se usa como ruta independiente /palabra/:id: vuelve a la página anterior
-      navigate(-1)
-    }
+    // Siempre se usa como modal: solo cierra el detalle sin recargar la página
+    onClose?.()
   }
 
-  if (!word.sustantivo) {
+  if (!word?.sustantivo) {
     return (
       <div className="fixed inset-0 bg-white z-[100] flex flex-col p-4 sm:p-6">
         <button onClick={handleClose} className="mb-4 text-gray-500 hover:text-gray-900">
@@ -63,29 +17,13 @@ export function WordDetail({ word: wordProp, onClose, words: wordsProp }) {
     )
   }
 
-  const bgWords = isMobile ? mobileBg : allWords
-
   return (
     <>
-      {/* Fondo: grilla de palabras con opacidad 15% */}
-      <div className="fixed inset-0 z-[100] pointer-events-none">
-        <div
-          className={
-            isMobile
-              ? 'absolute inset-0 grid grid-cols-3 gap-0 p-0 w-full h-full overflow-visible opacity-15'
-              : 'absolute inset-0 grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 2xl:grid-cols-12 gap-0 p-0 w-full h-full overflow-hidden opacity-15'
-          }
-        >
-          {bgWords.map((w) => (
-            <LazyImage
-              key={w.id}
-              src={w.fotoUrl}
-              alt={w.sustantivo}
-              className="w-full h-auto object-cover"
-            />
-          ))}
-        </div>
-      </div>
+      {/* Overlay: efecto de modal, la página se ve detrás pero oscurecida */}
+      <div
+        className="fixed inset-0 z-[99] bg-black/30 backdrop-blur-sm"
+        onClick={handleClose}
+      />
 
       {/* Recuadro del detalle */}
       <div
@@ -131,7 +69,7 @@ export function WordDetail({ word: wordProp, onClose, words: wordsProp }) {
         {/* Footer con link al archivo colectivo */}
         <div className="pt-4 sm:pt-6 border-t border-gray-200">
           <p className="text-gray-500 text-xs sm:text-sm">
-            Esta palabra forma parte del <span className="text-black underline underline-offset-2 hover:no-underline cursor-pointer" onClick={() => navigate('/')}>archivo colectivo</span>.
+            Esta palabra forma parte del <span className="text-black underline underline-offset-2 hover:no-underline cursor-pointer">archivo colectivo</span>.
           </p>
         </div>
       </div>

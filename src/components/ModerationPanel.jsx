@@ -8,10 +8,10 @@ export function ModerationPanel() {
         <div className="w-full px-3 sm:px-4">
           <div className="flex items-center justify-between h-14 sm:h-16">
             <button
-              onClick={() => navigate('/archivo')}
+              onClick={() => navigate('/todos')}
               className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium text-gray-600 hover:text-gray-900"
             >
-              ← Volver al archivo
+              ← Volver
             </button>
           </div>
         </div>

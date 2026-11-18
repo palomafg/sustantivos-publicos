@@ -17,16 +17,16 @@ export default function BarrioView() {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {!selectedWord && <Navbar />}
+      <Navbar />
 
-      <main className={`relative ${selectedWord ? 'pt-0 sm:pt-0' : 'pt-20 sm:pt-24'} pb-8 sm:pb-12 px-3 sm:px-4 lg:px-6 w-full max-w-none`}>
+      <main className="relative pt-20 sm:pt-24 pb-8 sm:pb-12 px-3 sm:px-4 lg:px-6 w-full max-w-none">
         {/* Botón volver arriba izquierda */}
         <div className="mb-6 sm:mb-8">
           <button
-            onClick={() => navigate('/archivo')}
+            onClick={() => navigate('/ubicacion')}
             className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium text-gray-600 hover:text-gray-900"
           >
-            ← Volver al archivo
+            ← Volver
           </button>
         </div>
 
@@ -37,34 +37,32 @@ export default function BarrioView() {
           </h2>
         </div>
 
-        {selectedWord ? (
+        <div className="relative left-1/2 -translate-x-1/2 w-screen max-w-none">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-1 p-1 w-full">
+            {barrioWords.map((word) => (
+              <WordItem
+                key={word.id}
+                word={word}
+                style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
+                className='word-item relative select-none group cursor-pointer opacity-pulse'
+                onSelect={setSelectedWordId}
+              />
+            ))}
+          </div>
+        </div>
+
+        {selectedWord && (
           <WordDetail
             word={selectedWord}
             words={barrioWords}
             onClose={() => setSelectedWordId(null)}
           />
-        ) : (
-          <div className="relative left-1/2 -translate-x-1/2 w-screen max-w-none">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-1 p-1 w-full">
-              {barrioWords.map((word) => (
-                <WordItem
-                  key={word.id}
-                  word={word}
-                  style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
-                  className='word-item relative select-none group cursor-pointer opacity-pulse'
-                  onSelect={setSelectedWordId}
-                />
-              ))}
-            </div>
-          </div>
         )}
 
-        {!selectedWord && (
-          <footer className="mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200 text-gray-500 text-xs sm:text-sm">
-            <p>Archivo colectivo de la Ciudad Autónoma de Buenos Aires</p>
-            <p className="mt-1 text-[10px] sm:text-xs">Paloma González — 2026</p>
-          </footer>
-        )}
+        <footer className="mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200 text-gray-500 text-xs sm:text-sm">
+          <p>Archivo colectivo de la Ciudad Autónoma de Buenos Aires</p>
+          <p className="mt-1 text-[10px] sm:text-xs">Paloma González — 2026</p>
+        </footer>
       </main>
     </div>
   )

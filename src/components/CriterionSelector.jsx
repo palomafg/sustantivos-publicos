@@ -1,6 +1,16 @@
-import { Link, useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+
+const criterioARuta = {
+  todos: '/todos',
+  barrio: '/ubicacion',
+  alfabeto: '/a-z',
+  visual: '/aspecto',
+  visitantes: '/visitantes',
+}
 
 export function CriterionSelector({ current, onChange }) {
+  const navigate = useNavigate()
+
   const criteria = [
     { value: 'todos', label: 'Todos' },
     { value: 'barrio', label: 'Ubicacion' },
@@ -9,12 +19,17 @@ export function CriterionSelector({ current, onChange }) {
     { value: 'visitantes', label: 'Visitantes' },
   ]
 
+  const handleChange = (value) => {
+    navigate(criterioARuta[value])
+    if (onChange) onChange(value)
+  }
+
   return (
     <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
       {criteria.map((c) => (
         <button
           key={c.value}
-          onClick={() => onChange(c.value)}
+          onClick={() => handleChange(c.value)}
           className={`px-2 sm:px-3 py-1 sm:py-2 text-xs sm:text-sm font-medium rounded-full border transition-colors ${
             current === c.value
               ? 'bg-black text-white border-black'

@@ -5,10 +5,12 @@ export function Navbar() {
   const location = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
   const links = [
-    { to: '/archivo', label: 'Archivo' },
+    { to: '/todos', label: 'Archivo' },
     { to: '/cargar', label: 'Subir' },
     { to: '/moderar', label: 'Moderar' },
   ]
+
+  const isActive = (to) => location.pathname === to || location.pathname === `/sustantivos-publicos${to}`
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur border-b border-gray-200 z-50 w-full pt-[10px]">
@@ -31,7 +33,7 @@ export function Navbar() {
                 key={link.to}
                 to={link.to}
                 className={`text-xs sm:text-sm font-medium ${
-                  location.pathname === link.to
+                  isActive(link.to)
                     ? 'text-black'
                     : 'text-gray-500 hover:text-gray-900'
                 } py-1 px-2 rounded hover:bg-gray-50`}
@@ -62,7 +64,7 @@ export function Navbar() {
               key={link.to}
               to={link.to}
               className={`text-sm font-medium py-2 px-4 rounded ${
-                location.pathname === link.to
+                isActive(link.to)
                   ? 'text-black bg-gray-50'
                   : 'text-gray-600 hover:bg-gray-50'
               }`}

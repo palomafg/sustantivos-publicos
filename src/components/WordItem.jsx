@@ -1,14 +1,9 @@
-import { useNavigate } from 'react-router-dom'
 import { LazyImage } from './LazyImage'
 
 export function WordItem({ word, style, className, onSelect }) {
-  const navigate = useNavigate()
-
   const handleClick = () => {
     if (onSelect) {
       onSelect(word.id)
-    } else {
-      navigate(`/palabra/${word.id}`)
     }
   }
 

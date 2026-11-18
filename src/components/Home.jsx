@@ -42,7 +42,7 @@ export function Home({ words }) {
   const handleEnter = () => {
     setInteracted(true)
     setShowHint(false)
-    navigate('/archivo')
+    navigate('/todos')
   }
 
   const items = visibleWords.map((word, index) => {

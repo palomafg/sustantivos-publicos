@@ -1,13 +1,38 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { WordItem } from './WordItem'
 import { LazyImage } from './LazyImage'
 
+const STORAGE_KEY = 'sustantivos-orden-todos'
+
 export function WordCloud({ words, criterion, onSelect }) {
   const navigate = useNavigate()
 
-  // Orden random para la grilla de "Todos" (se calcula una sola vez)
-  const shuffled = useMemo(() => [...words].sort(() => Math.random() - 0.5), [words])
+  // Orden aleatorio persistente para la grilla de "Todos"
+  // Se genera una sola vez (primera visita) y se guarda en localStorage del navegador
+  const [savedOrder, setSavedOrder] = useState(() => {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY)
+      return saved ? JSON.parse(saved) : null
+    } catch {
+      return null
+    }
+  })
+
+  // Construir array de palabras ordenado según el orden persistente
+  const orderedWords = useMemo(() => {
+    const order = savedOrder || [...words].sort(() => Math.random() - 0.5).map((w) => w.id)
+    if (!savedOrder) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(order))
+      } catch {
+        // Ignorar errores de localStorage
+      }
+      setSavedOrder(order)
+    }
+    const wordById = new Map(words.map((w) => [w.id, w]))
+    return order.map((id) => wordById.get(id)).filter(Boolean)
+  }, [words, savedOrder])
 
   const isGrid = criterion === 'todos'
   const isBarrio = criterion === 'barrio'
@@ -38,7 +63,7 @@ export function WordCloud({ words, criterion, onSelect }) {
     >
       {isGrid ? (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-1 p-1 w-full">
-          {shuffled.map((word) => (
+          {orderedWords.map((word) => (
             <WordItem
               key={word.id}
               word={word}
@@ -55,7 +80,7 @@ export function WordCloud({ words, criterion, onSelect }) {
               <div
                 key={barrio}
                 className="relative w-full overflow-visible cursor-pointer my-2 sm:my-3"
-                onClick={() => navigate(`/archivo/${barrio.toLowerCase()}`)}
+                onClick={() => navigate(`/ubicacion/${barrio.toLowerCase()}`)}
               >
                 <div className="relative w-full h-[120px] sm:h-[160px] flex items-center justify-center overflow-hidden bg-white">
                   {barrioWords.map((word, index) => {
@@ -101,7 +126,7 @@ export function WordCloud({ words, criterion, onSelect }) {
         </div>
       ) : (
         <>
-          {shuffled.map((word, index) => {
+          {orderedWords.map((word, index) => {
             const seed = word.id.charCodeAt(0) + word.id.charCodeAt(word.id.length - 1)
             const expTop = 60 + (seed * 37) % 70
             const expLeft = 20 + (seed * 53) % 70
