@@ -5,7 +5,6 @@ const criterioARuta = {
   barrio: '/ubicacion',
   alfabeto: '/a-z',
   visual: '/aspecto',
-  visitantes: '/visitantes',
 }
 
 export function CriterionSelector({ current, onChange }) {
@@ -16,12 +15,12 @@ export function CriterionSelector({ current, onChange }) {
     { value: 'barrio', label: 'Ubicacion' },
     { value: 'alfabeto', label: 'A-Z' },
     { value: 'visual', label: 'Aspecto' },
-    { value: 'visitantes', label: 'Visitantes' },
   ]
 
   const handleChange = (value) => {
     navigate(criterioARuta[value])
     if (onChange) onChange(value)
+    window.scrollTo(0, 0)
   }
 
   return (

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Navbar } from '../components/Navbar'
 import { CriterionSelector } from '../components/CriterionSelector'
 import { WordDetail } from '../components/WordDetail'
@@ -11,6 +11,15 @@ export default function Archivo({ initialCriterion = 'todos' }) {
 
   const approvedWords = mockWords.filter(w => w.aprobado)
   const selectedWord = approvedWords.find(w => w.id === selectedWordId) || null
+
+  // Restaurar scroll guardado al volver desde una vista interna
+  useEffect(() => {
+    const savedScrollY = sessionStorage.getItem('returnScrollY')
+    if (savedScrollY) {
+      window.scrollTo(0, parseInt(savedScrollY, 10))
+      sessionStorage.removeItem('returnScrollY')
+    }
+  }, [])
 
   return (
     <div className="min-h-screen relative overflow-hidden">

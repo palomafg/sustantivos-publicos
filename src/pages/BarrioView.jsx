@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Navbar } from '../components/Navbar'
+import { CriterionSelector } from '../components/CriterionSelector'
 import { WordItem } from '../components/WordItem'
 import { WordDetail } from '../components/WordDetail'
 import { mockWords } from '../data/mockWords'
@@ -15,26 +16,41 @@ export default function BarrioView() {
   )
   const selectedWord = barrioWords.find((w) => w.id === selectedWordId) || null
 
+  // Scroll al top al cambiar de barrio
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [barrio])
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       <Navbar />
 
-      <main className="relative pt-20 sm:pt-24 pb-8 sm:pb-12 px-3 sm:px-4 lg:px-6 w-full max-w-none">
-        {/* Botón volver arriba izquierda */}
-        <div className="mb-6 sm:mb-8">
-          <button
-            onClick={() => navigate('/ubicacion')}
-            className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium text-gray-600 hover:text-gray-900"
-          >
-            ← Volver
-          </button>
-        </div>
+      <main className="relative pt-52 sm:pt-72 pb-8 sm:pb-12 px-3 sm:px-4 lg:px-6 w-full max-w-none">
+        {/* CriterionSelector + Header de volver y titulo, pegados uno debajo del otro */}
+        <div className="fixed top-[66px] sm:top-[74px] left-0 right-0 z-[60] bg-white px-3 sm:px-4 lg:px-6 w-full">
+          {/* CriterionSelector */}
+          <div className="border-t border-b border-gray-200 px-3 sm:px-4 py-2 sm:py-3 justify-center items-center">
+            <CriterionSelector
+              current="barrio"
+            />
+          </div>
 
-        {/* Título centrado */}
-        <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tighter leading-none text-black uppercase tracking-[0.05em]">
-            {barrio}
-          </h2>
+          {/* Botón volver arriba izquierda */}
+          <div className="mt-2 sm:mt-3 mb-4 sm:mb-6">
+            <button
+              onClick={() => navigate('/ubicacion')}
+              className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium text-gray-600 hover:text-gray-900"
+            >
+              ← Volver
+            </button>
+          </div>
+
+          {/* Título centrado */}
+          <div className="text-center mb-4 sm:mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tighter leading-none text-black uppercase tracking-[0.05em]">
+              {barrio}
+            </h2>
+          </div>
         </div>
 
         <div className="relative left-1/2 -translate-x-1/2 w-screen max-w-none">
